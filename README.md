@@ -71,7 +71,7 @@ cp .env.example .env.local
 
 ## 支持的模型（参考 Flow2API） 🎛️
 
-请查看 Flow2API 的 README“支持的模型”一节 https://github.com/TheSmallHanCat/flow2api
+请查看 Flow2API 的 README“支持的模型”一节 https://github.com/TheSmallHanCat/flow2api  
 常见示例：
 - 🖼️ 图片生成：
   - `gemini-2.5-flash-image-landscape`（横屏）
