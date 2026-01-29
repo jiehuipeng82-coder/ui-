@@ -1,0 +1,30 @@
+# 依赖目录
+node_modules
+npm-debug.log
+
+# 构建产物
+dist
+
+# IDE配置
+.vscode
+.idea
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
+# 文档
+CONTRIBUTING.md
+LICENSE
+README.md
+TROUBLESHOOTING.md
+使用说明.txt
+
+# 配置文件
+.eslintrc
+.prettierrc
+.editorconfig

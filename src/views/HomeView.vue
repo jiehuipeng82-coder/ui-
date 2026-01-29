@@ -257,6 +257,9 @@ const generateImage = async () => {
           }
           if ((response as any).violation) {
             generationStore.setViolation(imageId, '内容违规或连接错误')
+          } else {
+            // 更新统计数据 - 生成成功
+            generationStore.updateStats(0.01) // 假设每次生成消耗 0.01 元
           }
           historyStore.addImage({
             id: response.id,
@@ -304,8 +307,6 @@ const copyPrompt = (promptText: string) => {
 
 // Load stores on mount
 onMounted(() => {
-  generationStore.loadFromStorage()
-  historyStore.loadFromStorage()
   fetchModels()
 })
 </script>
@@ -608,8 +609,9 @@ onMounted(() => {
 
 <style scoped>
 .home-view {
-  max-width: 1400px;
+  max-width: 100%;
   margin: 0 auto;
+  padding: 24px;
 }
 
 .input-card, .preview-card {
